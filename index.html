@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Manodip Pal — PhD Scholar at IIT Bombay researching advanced electrocatalysts, alkaline and seawater electrolysis, hybrid electrolysis and green hydrogen production.">
+<title>Manodip Pal | Electrochemical Energy Researcher</title>
+<style>
+:root{
+  --bg:#f7f8f5; --surface:#ffffff; --ink:#15221d; --muted:#62716b;
+  --accent:#1f6b55; --accent2:#b58a4a; --line:#dce4df; --dark:#10231c;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.65}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,92%);margin:auto}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(247,248,245,.9);backdrop-filter:blur(14px);border-bottom:1px solid rgba(220,228,223,.8)}
+.nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:-.03em;font-size:1.1rem}
+.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:25px;font-size:.9rem;color:var(--muted)}
+.navlinks a:hover{color:var(--accent)}
+.hero{padding:150px 0 90px;background:linear-gradient(135deg,#f7f8f5 0%,#edf4ef 55%,#f7f8f5 100%)}
+.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:70px;align-items:center}
+.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.75rem;color:var(--accent);font-weight:800;margin-bottom:18px}
+h1{font-size:clamp(3rem,7vw,5.8rem);line-height:.98;letter-spacing:-.065em;margin-bottom:28px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.lead{font-size:1.16rem;color:var(--muted);max-width:720px}
+.buttons{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.btn{padding:12px 19px;border-radius:8px;font-weight:700;border:1px solid var(--ink);display:inline-block}
+.btn.primary{background:var(--dark);color:white;border-color:var(--dark)}
+.btn.secondary{border-color:var(--line);background:white}
+.hero-card{background:var(--dark);color:white;padding:34px;border-radius:18px;box-shadow:0 20px 60px rgba(16,35,28,.15)}
+
+.profile-photo{
+  display:block;
+  width:150px;
+  height:150px;
+  object-fit:cover;
+  object-position:center top;
+  border-radius:50%;
+  margin:0 auto 26px;
+  border:4px solid rgba(255,255,255,.9);
+  box-shadow:0 10px 30px rgba(0,0,0,.18);
+}
+.hero-card .metric{padding:17px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+.hero-card .metric:last-child{border:0}
+.metric strong{display:block;font-size:1.65rem;color:#d6e8dd}
+.metric span{color:#aabdb4;font-size:.88rem}
+section{padding:95px 0}
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:42px}
+.kicker{color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:.13em;font-size:.72rem}
+h2{font-size:clamp(2rem,4vw,3.3rem);letter-spacing:-.045em;line-height:1.05;margin-top:8px}
+.section-intro{max-width:530px;color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px}
+.about-grid p{color:var(--muted);margin-bottom:18px}
+.tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+.tag{border:1px solid var(--line);background:#fff;border-radius:100px;padding:7px 12px;font-size:.82rem}
+.research{background:#10231c;color:white}
+.research .section-intro{color:#b8c9c1}
+.research .kicker{color:#d3b170}
+.research-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--surface);color:var(--ink);border:1px solid var(--line);padding:28px;border-radius:14px}
+.research .card{background:#17362b;border-color:#2a4b3e;color:white}
+.card .num{font-size:.75rem;color:var(--accent);font-weight:800;letter-spacing:.12em}
+.research .num{color:#d3b170}
+.card h3{font-size:1.18rem;margin:13px 0 10px}
+.card p{font-size:.91rem;color:var(--muted)}
+.research .card p{color:#b8c9c1}
+.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.project{padding:30px;border:1px solid var(--line);background:white;border-radius:14px}
+.project h3{font-size:1.35rem;margin:9px 0}
+.project p{color:var(--muted);font-size:.93rem}
+.project-label{font-size:.72rem;font-weight:800;text-transform:uppercase;color:var(--accent);letter-spacing:.12em}
+.timeline{border-left:1px solid var(--line);margin-left:8px}
+.titem{padding:0 0 34px 32px;position:relative}
+.titem:before{content:"";position:absolute;left:-5px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--accent)}
+.titem .year{font-size:.75rem;font-weight:800;color:var(--accent);letter-spacing:.12em}
+.titem h3{margin:5px 0 3px;font-size:1.08rem}
+.titem p{color:var(--muted);font-size:.91rem}
+.pub-list{display:grid;gap:12px}
+.pub{background:white;border:1px solid var(--line);padding:21px 24px;border-radius:10px}
+.pub .year{font-size:.72rem;color:var(--accent);font-weight:800}
+.pub h3{font-size:1rem;margin:5px 0}
+.pub p{font-size:.86rem;color:var(--muted)}
+.contact{background:#edf3ef}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.contact-box{background:white;border:1px solid var(--line);padding:30px;border-radius:14px}
+.contact-box p{color:var(--muted);margin:8px 0}
+footer{padding:30px 0;background:var(--dark);color:#b8c9c1;font-size:.83rem}
+footer .container{display:flex;justify-content:space-between;gap:20px}
+@media(max-width:800px){
+ .container>div[style*='grid-template-columns:repeat(4']{grid-template-columns:repeat(2,1fr)!important}
+
+ .navlinks{display:none}.hero{padding-top:120px}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+ .research-grid,.projects-grid{grid-template-columns:1fr}
+ .section-head{display:block}.section-intro{margin-top:18px}.hero-card{margin-top:15px}
+}
+
+/* Final polish */
+::selection{background:#d3e7dc;color:#10231c}
+body{letter-spacing:-.005em}
+nav{box-shadow:0 1px 18px rgba(16,35,28,.04)}
+.logo{font-size:1.05rem}
+.hero{min-height:92vh;display:flex;align-items:center}
+.hero-card{position:relative;overflow:hidden}
+.hero-card:after{content:"";position:absolute;width:180px;height:180px;border:1px solid rgba(211,177,112,.3);border-radius:50%;right:-65px;top:-65px}
+.btn{transition:transform .2s ease,box-shadow .2s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(16,35,28,.1)}
+.card,.project,.pub,.contact-box{transition:transform .2s ease,box-shadow .2s ease}
+.card:hover,.project:hover,.pub:hover,.contact-box:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(16,35,28,.07)}
+.pub h3{line-height:1.45}
+.pub a:hover,.contact-box a:hover{opacity:.7}
+
+</style>
+</head>
+<body>
+<nav>
+  <div class="container nav-inner">
+    <a class="logo" href="#home">MANODIP<span>.</span></a>
+    <div class="navlinks">
+      <a href="#about">About</a><a href="#research">Research</a><a href="#projects">Projects</a>
+      <a href="#publications">Publications</a><a href="#journey">Journey</a><a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+<div class="container hero-grid">
+  <div>
+    <div class="eyebrow">PhD Researcher · IIT Bombay</div>
+    <h1>Engineering a <em>cleaner</em> electrochemical future.</h1>
+    <p class="lead">I work at the intersection of electrocatalysis, sustainable hydrogen production and electrolyzer development — with a focus on hybrid seawater electrolysis, oxygen reduction and electrochemical CO₂ conversion.</p>
+    <div class="buttons">
+      <a class="btn primary" href="#research">Explore my research</a>
+      <a class="btn secondary" href="CV_Manodip.docx">Download CV</a>
+    </div>
+  </div>
+  <div class="hero-card">
+    <img class="profile-photo" src="profile.jpg" alt="Manodip Pal">
+    <div class="metric"><strong>PhD</strong><span>IIT Bombay · Electrochemical Energy Research</span></div>
+    <div class="metric"><strong>13</strong><span>Peer-reviewed publications</span></div>
+    <div class="metric"><strong>H₂ · O₂ · CO₂</strong><span>Electrochemical conversion & electrolyzers</span></div>
+    <div class="metric"><strong>Monash</strong><span>International research visit · 2026</span></div>
+  </div>
+</div>
+</header>
+
+<div style="background:#fff;border-bottom:1px solid var(--line)">
+<div class="container" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:24px 0">
+  <div><div class="kicker">13</div><div style="font-weight:700">Publications</div></div>
+  <div><div class="kicker">IITB</div><div style="font-weight:700">PhD Scholar</div></div>
+  <div><div class="kicker">H₂</div><div style="font-weight:700">Green Hydrogen</div></div>
+  <div><div class="kicker">ORCID</div><div style="font-weight:700">0000-0002-9657-8282</div></div>
+</div>
+</div>
+
+<section id="about">
+<div class="container">
+ <div class="section-head"><div><div class="kicker">01 · About</div><h2>Research with a purpose.</h2></div>
+ <p class="section-intro">My research aims to connect materials chemistry with practical electrochemical devices for sustainable energy conversion.</p></div>
+ <div class="about-grid">
+  <div>
+   <p>I am a PhD Scholar at the Indian Institute of Technology Bombay working on advanced nanostructured electrocatalysts and electrochemical energy conversion. My research focuses on industrial-scale alkaline and seawater electrolysis, hybrid electrolysis and solar-driven green hydrogen production.</p>
+   <p>My approach combines interface engineering, electronic-structure modulation and renewable-energy integration to bridge catalyst-level advances with practical electrolyzer technologies.</p>
+  </div>
+  <div>
+   <p><strong>Current research interests</strong></p>
+   <div class="tags">
+    <span class="tag">Green Hydrogen</span><span class="tag">Hybrid Seawater Electrolysis</span>
+    <span class="tag">AEM Electrolyzers</span><span class="tag">HER / OER</span>
+    <span class="tag">ORR</span><span class="tag">CO₂ Reduction</span>
+    <span class="tag">Electrocatalysis</span><span class="tag">Industrial Current Density</span>
+    <span class="tag">Sustainable Energy</span>
+   </div>
+  </div>
+ </div>
+</div>
+</section>
+
+<section class="research" id="research">
+<div class="container">
+ <div class="section-head"><div><div class="kicker">02 · Research</div><h2>From catalyst to electrolyzer.</h2></div>
+ <p class="section-intro">A research portfolio spanning fundamental electrochemistry, catalyst reconstruction and device-level hydrogen generation.</p></div>
+ <div class="research-grid">
+  <div class="card"><div class="num">01 · HYDROGEN</div><h3>HER / OER & Water Splitting</h3><p>Advanced transition-metal-based electrocatalysts for efficient hydrogen and oxygen evolution under alkaline conditions and at practically relevant current densities.</p></div>
+  <div class="card"><div class="num">02 · SEAWATER</div><h3>Hybrid Seawater Electrolysis</h3><p>Developing alternative anodic chemistry and AEM electrolyzer architectures to reduce the energy and selectivity challenges associated with conventional seawater splitting.</p></div>
+  <div class="card"><div class="num">03 · CARBON</div><h3>Electrochemical CO₂ Conversion</h3><p>Exploring catalyst and electrolyzer strategies for converting CO₂ into value-added chemicals and fuels using renewable electricity.</p></div>
+  <div class="card"><div class="num">04 · OXYGEN</div><h3>Oxygen Reduction Reaction</h3><p>Electrocatalytic ORR studies using rotating disk and rotating ring-disk methodologies to understand activity, kinetics and reaction pathways.</p></div>
+  <div class="card"><div class="num">05 · MATERIALS</div><h3>Nanostructured Electrocatalysts</h3><p>Designing heterostructures, layered hydroxides, phosphides, sulfides, doped materials and carbon-supported catalysts with controlled interfaces.</p></div>
+  <div class="card"><div class="num">06 · DEVICES</div><h3>Electrolyzer Engineering</h3><p>Moving beyond half-cell metrics toward membrane-electrode assemblies, stability testing, gas evolution and system-level performance.</p></div>
+ </div>
+</div>
+</section>
+
+<section id="projects">
+<div class="container">
+ <div class="section-head"><div><div class="kicker">03 · Selected Projects</div><h2>Selected research projects.</h2></div></div>
+ <div class="projects-grid">
+  <article class="project"><div class="project-label">AEM electrolyzer · seawater</div><h3>Ni₂P@NiCoLDH-o-CNT</h3><p>Heterostructured nickel phosphide / NiCo layered double hydroxide supported on mildly oxidized carbon nanotubes for alkaline seawater electrolysis, including long-duration operation and solar-assisted hydrogen generation.</p></article>
+  <article class="project"><div class="project-label">ORR · electrochemistry</div><h3>Electrocatalytic oxygen reduction</h3><p>Mechanistic and kinetic evaluation of ORR using RDE/RRDE methods, including peroxide pathway analysis, Tafel behaviour and electrochemical surface-area considerations.</p></article>
+  <article class="project"><div class="project-label">Water oxidation · interfaces</div><h3>Plasma-engineered phosphide heterostructures</h3><p>Studying reconstruction of Ni₂P/Fe₂P-type heterostructures into catalytically active oxyhydroxide phases for water oxidation at high current density.</p></article>
+ </div>
+</div>
+</section>
+
+<section id="journey">
+<div class="container">
+ <div class="section-head"><div><div class="kicker">04 · Academic Journey</div><h2>Building expertise across disciplines.</h2></div></div>
+ <div class="timeline">
+  <div class="titem"><div class="year">2021 — PRESENT</div><h3>PhD Scholar · IIT Bombay</h3><p>Electrochemical energy conversion, advanced nanostructured electrocatalysts, alkaline and seawater electrolysis, hybrid electrolysis and green hydrogen production.</p></div>
+  <div class="titem"><div class="year">2019 — 2021</div><h3>Master's Research · IIT Kanpur</h3><p>Advanced materials and chemistry research, followed by transition into electrochemical energy research.</p></div>
+  <div class="titem"><div class="year">2026</div><h3>International Research Visit · Monash University</h3><p>Research training, materials synthesis and characterization, collaborative research and technical reporting.</p></div>
+  <div class="titem"><div class="year">TEACHING</div><h3>Teaching Assistant · IIT Bombay</h3><p>Teaching assistance across five courses for undergraduate engineering students, including tutorials and laboratory sessions.</p></div>
+ </div>
+</div>
+</section>
+
+<section id="publications">
+<div class="container">
+ <div class="section-head"><div><div class="kicker">05 · Publications</div><h2>Research outputs.</h2></div>
+ <p class="section-intro">13 publications listed in the supplied publication record, spanning electrocatalysis, hydrogen production, seawater electrolysis, ORR, OER, CO₂ conversion and energy materials.</p></div>
+ <div class="pub-list">
+  <article class="pub">
+      <div class="year">2026 · JACS</div>
+      <h3>Plasmonic Gold Antenna–Copper Molecular Complex Reactor Assembly for Exclusive CO₂ to Formate Conversion under White-Light Irradiation.</h3>
+      <p>Kaushik, T.; Chowdhury, A.; Pal, M.; et al. <em>Journal of the American Chemical Society</em> 2026, 148 (6), 6309–6323.</p>
+      <p style="margin-top:8px"><a href="https://doi.org/10.1021/jacs.5c18872" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700">View DOI ↗</a></p>
+    </article><article class="pub">
+      <div class="year">2026 · J. MATER. CHEM. A</div>
+      <h3>Green Hydrogen Production by Alkaline Seawater Electrolyzers: A Transition from Lab-Scale Research to Industrial-Scale Applications.</h3>
+      <p>Pal, M.; Biswas, R.; Trivedi, V.; Saini, A.; Dutta, A. <em>Journal of Materials Chemistry A</em> 2026, 14 (11), 6106–6144.</p>
+      <p style="margin-top:8px"><a href="https://doi.org/10.1039/d5ta07141k" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700">View DOI ↗</a></p>
+    </article><article class="pub">
+      <div class="year">2026 · SMALL</div>
+      <h3>Restructuring of a Diamagnetic Diiron-Sulfur Complex to Paramagnetic Ferredoxin-Inspired [Fe₄S₄] Porous Organic Polymer Stimulates Optimally Coordinated Sites for Oxygen Evolution Catalysis.</h3>
+      <p>Biswas, C.; Zheng, T.; Pal, M.; et al. <em>Small</em> 2026, e75628.</p>
+      <p style="margin-top:8px"><a href="https://doi.org/10.1002/smll.75628" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700">View DOI ↗</a></p>
+    </article><article class="pub">
+      <div class="year">2026 · ACS APPLIED NANO MATERIALS</div>
+      <h3>Metal-Complex-Assisted Surface Reconstruction of MnO₂ Nanorods for the Hydrogen Evolution Reaction under a Wide pH Range.</h3>
+      <p>Biswas, R.; Pal, M.; Roy, A.; Banerjee, A.; Dutta, A. <em>ACS Applied Nano Materials</em> 2026, 9 (16), 7139–7148.</p>
+      <p style="margin-top:8px"><a href="https://doi.org/10.1021/acsanm.6c00255" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700">View DOI ↗</a></p>
+    </article><article class="pub">
+      <div class="year">2026 · ACS APPLIED NANO MATERIALS</div>
+      <h3>Rational Construction of NiS₂/CoTe Nanostructures as Bifunctional Electrocatalysts for Overall Water Splitting.</h3>
+      <p>Dolkar, T.; Biswas, R.; Pal, M.; Roy, A.; Dutta, A. <em>ACS Applied Nano Materials</em> 2026.</p>
+      <p style="margin-top:8px"><a href="https://doi.org/10.1021/acsanm.6c02930" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700">View DOI ↗</a></p>
+    </article><article class="pub">
+      <div class="year">2025 · J. MATER. CHEM. A</div>
+      <h3>Unravelling the Efficacy of Defect Engineered Mesoporous Ni–Co Spinel Oxide Nanowires as an Energy Efficient Electrocatalyst for the Oxygen Reduction Reaction and Fuel Cell Applications.</h3>
+      <p>Das, D.; Pal, M.; Sarma, M.; et al. <em>Journal of Materials Chemistry A</em> 2025, 13 (13), 9402–9417.</p>
+      <p style="margin-top:8px"><a href="https://doi.org/10.1039/d4ta04454a" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700">View DOI ↗</a></p>
+    </article><article class="pub">
+      <div class="year">2025 · SMALL</div>
+      <h3>Pyridine Homopolymers Axial Ligation on Cobaloxime for Efficient Hydrogen Production.</h3>
+      <p>Shelake, S. P.; Iqbal, A.; Pal, M.; et al. <em>Small</em> 2025, 21 (32), 2501601.</p>
+      <p style="margin-top:8px"><a href="https://doi.org/10.1002/smll.202501601" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700">View DOI ↗</a></p>
+    </article><article class="pub">
+      <div class="year">2025 · CATALYSIS TODAY</div>
+      <h3>A Comprehensive Review of Metal-Air Batteries: Mechanistic Aspects, Advantages and Challenges.</h3>
+      <p>Barman, M.; Pal, M.; Biswas, R.; Dutta, A. <em>Catalysis Today</em> 2025, 451, 115229.</p>
+      <p style="margin-top:8px"><a href="https://doi.org/10.1016/j.cattod.2025.115229" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700">View DOI ↗</a></p>
+    </article><article class="pub">
+      <div class="year">2024 · ENERGY ADVANCES</div>
+      <h3>Strategic Ni-Doping Improved Electrocatalytic H₂ Production by Bi₃O₄Br in Alkaline Water.</h3>
+      <p>Pal, M.; Biswas, R.; Barman, S.; Dutta, A. <em>Energy Advances</em> 2024, 3 (7), 1562–1570.</p>
+      <p style="margin-top:8px"><a href="https://doi.org/10.1039/d4ya00228h" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700">View DOI ↗</a></p>
+    </article><article class="pub">
+      <div class="year">2023 · CR-PHYSICAL SCIENCE</div>
+      <h3>Transition Metal Phosphides as Cardinal Electrocatalytic Materials for Alkaline Hydrogen Production.</h3>
+      <p>Aziz, S. K. T.; Sultana, S.; Kumar, A.; et al. <em>CR-PHYSICAL SCIENCE</em> 2023, 4 (12).</p>
+      <p style="margin-top:8px"><a href="https://doi.org/10.1016/j.xcrp.2023.101747" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700">View DOI ↗</a></p>
+    </article><article class="pub">
+      <div class="year">2023 · RSC ADVANCES</div>
+      <h3>ZnGa₂−xAlxO₄ (x = 0 ≤ 2) Spinel for Persistent Light Emission and HER/OER Bi-Functional Catalysis.</h3>
+      <p>Parayil, R. T.; Gupta, S. K.; Pal, M.; et al. <em>RSC Advances</em> 2023, 13 (44), 31101–31111.</p>
+      <p style="margin-top:8px"><a href="https://doi.org/10.1039/d3ra05017c" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700">View DOI ↗</a></p>
+    </article><article class="pub">
+      <div class="year">2023 · INTERNATIONAL JOURNAL OF HYDROGEN ENERGY</div>
+      <h3>A Quinary High Entropy Metal Oxide Exhibiting Robust and Efficient Bidirectional O₂ Reduction and Water Oxidation.</h3>
+      <p>Siddhartha Sairam, K. V. R.; Aziz, S. T.; Karajagi, I.; et al. <em>International Journal of Hydrogen Energy</em> 2023, 48 (28), 10521–10531.</p>
+      <p style="margin-top:8px"><a href="https://doi.org/10.1016/j.ijhydene.2022.12.034" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700">View DOI ↗</a></p>
+    </article><article class="pub">
+      <div class="year">2023 · CHEMELECTROCHEM</div>
+      <h3>Double Perovskite Oxides Bringing a Revelation in Oxygen Evolution Reaction Electrocatalyst Design.</h3>
+      <p>Banerjee, A.; Awasthi, M. K.; Maji, P.; Pal, M.; et al. <em>ChemElectroChem</em> 2023, 10 (4), e202201098.</p>
+      <p style="margin-top:8px"><a href="https://doi.org/10.1002/celc.202201098" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700">View DOI ↗</a></p>
+    </article>
+ </div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="container">
+ <div class="section-head"><div><div class="kicker">06 · Contact</div><h2>Let’s connect.</h2></div></div>
+ <div class="contact-grid">
+  <div><p style="font-size:1.1rem;color:var(--muted)">I am interested in research collaborations, postdoctoral opportunities and scientific discussions around sustainable electrochemical energy conversion.</p></div>
+  <div class="contact-box">
+   <p><strong>Email</strong><br><a href="mailto:manodippal14@gmail.com">manodippal14@gmail.com</a></p>
+   <p><strong>LinkedIn</strong><br><a href="https://www.linkedin.com/in/manodip-pal-438749219/" target="_blank" rel="noopener">linkedin.com/in/manodip-pal-438749219</a></p>
+   <p><strong>Google Scholar</strong><br><a href="https://scholar.google.com/citations?hl=en&user=B3fJKjAAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">Google Scholar profile</a></p>
+   <p><strong>ORCID</strong><br><a href="https://orcid.org/0000-0002-9657-8282" target="_blank" rel="noopener">ORCID: 0000-0002-9657-8282</a></p>
+  </div>
+ </div>
+</div>
+</section>
+
+<footer><div class="container"><span>© 2026 Manodip Pal</span><span><a href="https://scholar.google.com/citations?hl=en&user=B3fJKjAAAAAJ&view_op=list_works&sortby=pubdate">Scholar</a> · <a href="https://orcid.org/0000-0002-9657-8282">ORCID</a> · <a href="https://www.linkedin.com/in/manodip-pal-438749219/">LinkedIn</a></span></div></footer>
+</body>
+</html>
